@@ -1,20 +1,36 @@
 ---
-import Stats from '../components/Stats.astro';
-import Features from '../components/Features.astro';
-import HeroSection from '../components/HeroSection.astro';
-import Layout from '../layouts/Layout.astro';
-import Testimonials from '../components/Testimonials.astro';
-import CallToAction from '../components/CallToAction.astro';
-import Blog from '../components/Blog.astro';
+import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import HeroGeneric from "../components/heroGeneric.astro";
+import Features from "../components/Features.astro";
+import Stats from "../components/Stats.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CallToAction from "../components/CallToAction.astro";
+import Blog from "../components/Blog.astro";
+
+import HomeContent, { frontmatter } from "../content/home/index.mdx";
 ---
 
-<Layout title="Welcome to Astrolus.">
-	<main class="space-y-40 mb-40">
-		<HeroSection/>
-		<Features/>
-		<Stats/>
-		<Testimonials/>
-		<CallToAction/>
-		<Blog/>
-	</main>
+<Layout title={frontmatter.title}>
+  <main class="space-y-40 mb-40">
+    <HeroSection />
+
+    <HeroGeneric
+      btns={frontmatter.hero.btns}
+      data={{
+        title: frontmatter.hero.title,
+        desc: frontmatter.hero.desc,
+        img: frontmatter.hero.img,
+      }}
+    />
+
+    <Features />
+    <Stats />
+    <Testimonials />
+    <CallToAction />
+
+    <HomeContent />
+
+    <Blog />
+  </main>
 </Layout>
