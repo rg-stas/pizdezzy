@@ -3,25 +3,21 @@ import Container from "./Container.astro";
 const links = [
     {
         to: "/demo",
-        label: "Demo",
+        label: "L'azienda",
     },
     {
         to: "/#solution",
-        label: "Solution",
+        label: "Servizi",
     },
     {
         to: "/#reviews",
-        label: "Reviews",
-    },
-    {
-        to: "https://github.com/luasenvy/nextjs-astro-theme",
-        label: "NextJS Version",
+        label: "Contatti",
     },
 ];
 ---
 
 <header>
-    <nav id="nav" class="absolute group z-10 w-full border-b border-black/5 dark:border-white/5 lg:border-transparent">
+    <nav id="nav" class="fixed group z-10 w-full border-b border-black/5 dark:border-white/5 backdrop-blur-sm lg:border-transparent">
         <Container>
             <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4">
                 <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-fit">
@@ -30,7 +26,10 @@ const links = [
                             <div class="size-4 rounded-full bg-gray-900 dark:bg-white"></div>
                             <div class="h-6 w-2 bg-primary"></div>
                         </div>
-                        <span class="text-2xl font-bold text-gray-900 dark:text-white">Astrolus</span>
+                        <div class="flex flex-col select-none">
+                            <span class="text-2xl font-bold text-gray-900 dark:text-white mb-0 pb-0 leading-none">Lena IT</span>
+                            <span class="text-[11px] text-white uppercase">solutions Srl</span>
+                        </div>
                     </a>
 
                     <div class="relative flex max-h-10 items-center lg:hidden">
@@ -51,16 +50,16 @@ const links = [
                                     </a>
                                 ))
                             }
-                            <a href="https://tailtips.dev" target="_blank" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4">
-                                <span>TailwindCSS Tips</span>
-                                <span class="flex rounded-full border bg-primary/20 px-2 py-0.5 text-xs tracking-wider text-purple-700 dark:bg-white/10 dark:text-orange-300">New</span>
+                            <a href="https://tailtips.dev" target="_blank" class="flex gap-2  text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4">
+                                <span>Carriere</span>
+                                <span class="flex rounded-full border bg-primary/20 px-2 py-0.5 text-xs tracking-wider text-purple-700 dark:bg-white/10 dark:text-orange-300">Nuovo</span>
                             </a>
                         </div>
                     </div>
 
                     <div class="mt-12 lg:mt-0">
                         <a href="/register" class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
-                            <span class="relative text-sm font-semibold text-white"> Get Started</span>
+                            <span class="relative text-sm font-semibold text-white">Login Clienti</span>
                         </a>
                     </div>
                 </div>
