@@ -2,13 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/HeroSection.astro";
 import HeroGeneric from "../components/heroGeneric.astro";
-import Features from "../components/Features.astro";
-import Stats from "../components/Stats.astro";
-import Testimonials from "../components/Testimonials.astro";
 import CallToAction from "../components/CallToAction.astro";
 import Blog from "../components/Blog.astro";
 
 import HomeContent, { frontmatter } from "../content/home/index.mdx";
+import Divider from "../components/divider.astro";
 ---
 
 <Layout title={frontmatter.title}>
@@ -24,12 +22,18 @@ import HomeContent, { frontmatter } from "../content/home/index.mdx";
       }}
     />
 
-    <Features />
-    <Stats />
-    <Testimonials />
+    <!-- hero dupe for testing -->
+    <HeroGeneric 
+      btns={frontmatter.hero2.btns}
+      data={{
+        title: frontmatter.hero2.title,
+        desc: frontmatter.hero2.desc,
+        img: frontmatter.hero2.img,
+        order: frontmatter.hero2.order,
+      }}
+    />
+    <Divider />
     <CallToAction />
-
-    <HomeContent />
 
     <Blog />
   </main>
