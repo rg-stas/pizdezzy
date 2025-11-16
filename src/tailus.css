@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+/* Preline UI */
+@import "preline/variants.css";
+@source "../../node_modules/preline/dist/*.js";
+
 @theme {
     --color-primary : var(--color-indigo-600);
     --color-secondary : var(--color-orange-600);
